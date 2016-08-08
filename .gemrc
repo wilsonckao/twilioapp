@@ -1,0 +1,6 @@
+gem: -N
+
+alias wcode="cd ~/Sites/wyncode"
+
+source ~/.profile
+atom ~/.profile

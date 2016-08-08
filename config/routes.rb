@@ -5,14 +5,14 @@ Rails.application.routes.draw do
   get 'listings/index'
 
   resources :listings do
-    resources :orders
+    resources :orders, only: [:new, :create]
   end
 
   get 'pages/about'
-
   get 'pages/contact'
-
-
+  get 'seller' => "listings#seller"
+  get 'sales' => "orders#sales"
+  get 'purchases' => "orders#purchases"
   get 'twilio/index'
 
   root :to => 'twilio#index'

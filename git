@@ -1,4 +1,0 @@
-alias gs="git status"
-alias ga="git add"
-alias gc="git commit"
-alias gphm="git push heroku master"
