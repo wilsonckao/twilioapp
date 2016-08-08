@@ -31,6 +31,9 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem "paperclip"
+gem "paperclip-dropbox"
+gem "figaro"
+
 
 group :doc do
   gem 'sdoc', require: false
