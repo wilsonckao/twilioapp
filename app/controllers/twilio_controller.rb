@@ -3,11 +3,8 @@ class TwilioController < ApplicationController
   def send_sms
     message = params[:message]
     number = params[:number]
-<<<<<<< HEAD
-    account_sid = ENV["account_sid"]
-    auth_token = ENV["auth_token"]
-=======
->>>>>>> 2fc534d48a7465768a9065e44a4f104f9068c3b0
+    account_sid = ENV['AC7b1b128b297fc7d063fedd51ebb29132']
+    auth_token = ENV['5d76cfe3da6d0b731c29d92ac80070f0']
 
     @client = Twilio::REST::Client.new account_sid, auth_token
     sms = @message = @client.account.messages.create({:to => "+1"+"#{number}",

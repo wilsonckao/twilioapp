@@ -61,6 +61,7 @@ GEM
     debug_inspector (0.0.2)
     dropbox-sdk (1.6.5)
       json
+    envyable (1.0.0)
     erubis (2.7.0)
     execjs (2.7.0)
     ffi (1.9.14)
@@ -196,6 +197,7 @@ DEPENDENCIES
   bootstrap-sass
   byebug
   coffee-rails (~> 4.2)
+  envyable
   figaro
   jbuilder (~> 2.5)
   jquery-rails

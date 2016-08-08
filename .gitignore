@@ -22,3 +22,7 @@
 
 # Ignore application configuration
 /config/application.yml
+config/env.yml
+
+# Ignore files uploaded on localhost
+/public/system
