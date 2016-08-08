@@ -35,6 +35,8 @@ gem "paperclip"
 gem "paperclip-dropbox"
 gem "figaro"
 
+gem 'devise'
+
 
 group :doc do
   gem 'sdoc', require: false
