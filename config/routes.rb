@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
 
+  resources :orders
   devise_for :users
   get 'listings/index'
 
-  resources :listings
+  resources :listings do
+    resources :orders
+  end
 
   get 'pages/about'
 
