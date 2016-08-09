@@ -3,6 +3,10 @@ source 'https://rubygems.org'
 ruby "2.3.0"
 
 gem 'envyable'
+gem "fog"
+
+gem 'carrierwave'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0'
 # Use Puma as the app server
@@ -35,6 +39,7 @@ gem "paperclip"
 gem "paperclip-dropbox"
 gem "figaro"
 
+gem "mini_magick"
 
 gem 'devise'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
