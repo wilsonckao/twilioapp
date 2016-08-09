@@ -2,6 +2,19 @@
 
 <%= image_tag @restaurant.image_url %>
 
+<% @reviews.each do |review| %>
+  <div class="star-rating" data-score= <%= review.rating %> ></div>
+  <p><%= review.comment %></p>
+…
+<script>
+  $('.star-rating').raty({
+    path: 'https://s3.amazonaws.com/ yelpdemo-test/Stars',
+    readOnly: true,
+    score: function() {
+      return $(this).attr('data-score');
+    }
+  });
+</script>
 
 <p>
   <strong>Name:</strong>
