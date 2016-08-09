@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @review.rating %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @review.comment %>
+</p>
+
+<table class="table">
+  <tbody>
+    <% @reviews.each do |review| %>
+      <tr>
+        <td>
+          <div class="star-rating" data-score= <%= review.rating %> ></div>
+          <p><%= h(review.comment).gsub(/\n/, '<br/>').html_safe %></p>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Edit', edit_review_path(@review) %> |
+<%= link_to 'Back', reviews_path %>

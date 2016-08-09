@@ -12,6 +12,15 @@
     </div>
   <% end %>
 
+  <div id="star-rating"></div>
+  <script>
+    $('#star-rating').raty({
+      path: 'https://s3.amazonaws.com/yelpdemo77/Stars',
+      scoreName: 'review[rating]'
+    });
+  </script>
+
+
   <div class="form-group">
     <%= f.label :rating %>
     <%= f.number_field :rating, class: "form-control" %>

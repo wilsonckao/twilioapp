@@ -1,11 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <%= image_tag @restaurant.image_url %>
-
+<table class="table">
+  <tbody>
 <% @reviews.each do |review| %>
-  <div class="star-rating" data-score= <%= review.rating %> ></div>
-  <p><%= review.comment %></p>
-…
+    <tr>
+      <td>
+        <div class="star-rating" data-score= <%= review.rating %> ></div>
+        <p><%= review.comment %></p>
+      </td>
+    </tr>
+  <% end %>
+</tbody>
+</table>
 <script>
   $('.star-rating').raty({
     path: 'https://s3.amazonaws.com/ yelpdemo-test/Stars',
@@ -18,7 +25,12 @@
 
 <p>
   <strong>Name:</strong>
-  <%= @restaurant.name %>
+  <h2>
+    <%= @restaurant.name %>
+  </h2>
+
+  <div class="star-rating" data-score= <%= @avg_rating %> ></div>
+  <p><%= "#{@reviews.length} reviews" %></p>
 </p>
 
 <p>
