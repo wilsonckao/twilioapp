@@ -1,16 +1,19 @@
 class TwilioController < ApplicationController
 
+  def index
+    @history = Searchhistory.all
+  end
+
   def send_sms
     message = params[:message]
     number = params[:number]
-    account_sid = ENV['AC7b1b128b297fc7d063fedd51ebb29132']
-    auth_token = ENV['5d76cfe3da6d0b731c29d92ac80070f0']
 
-    @client = Twilio::REST::Client.new account_sid, auth_token
+
+    @client = Twilio::REST::Client.new(ENV['ACCT_SID'], ENV['AUTH_TOKEN'])
     sms = @message = @client.account.messages.create({:to => "+1"+"#{number}",
     :from => "+12568261204",
     :body => "#{message}"})
-
+    Searchhistory.create(message: message)
     puts sms.to
 
     # redirect_to '/'

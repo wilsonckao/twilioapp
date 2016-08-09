@@ -26,3 +26,4 @@ config/env.yml
 
 # Ignore files uploaded on localhost
 /public/system
+.env

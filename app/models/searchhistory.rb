@@ -1,0 +1,3 @@
+class Searchhistory < ApplicationRecord
+
+end

@@ -13,8 +13,9 @@
     <%= render 'layouts/header' %>
 
 
-    <%= yield %>
-
+<% @history.each do |f| %>
+<li><%= f.message %>
+  <% end %>
 
 
   </body>
