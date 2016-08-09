@@ -1,11 +1,16 @@
 class ReviewsController < ApplicationController
   before_action :authenticate_user!
+  before_action :set_restaurant
   before_action :set_review, only: [:show, :edit, :update, :destroy]
 
   # GET /reviews
   # GET /reviews.json
   def index
     @reviews = Review.all
+  end
+
+  def set_restaurant
+    @restaurant = Restaurant.find(params[:restaurant_id])
   end
 
   # GET /reviews/1
@@ -27,6 +32,7 @@ class ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
     @review.user_id = current_user.id
+    @review.restaurant_id = @restaurant.id
 
 
     respond_to do |format|
