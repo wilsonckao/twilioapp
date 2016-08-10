@@ -11,6 +11,8 @@ class User < ApplicationRecord
   has_many :purchases, class_name: "Order", foreign_key: "buyer_id"
   has_many :reviews, dependent: :destroy
 
+  validates :first_name, :last_name, presence: true
+
   # validates :name, presence: true
 
 end
