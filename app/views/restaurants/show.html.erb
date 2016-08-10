@@ -1,5 +1,14 @@
 <p id="notice"><%= notice %></p>
 
+<thead>
+  <tr>
+    <th class="col-md-3"></th>
+    <th class="col-md-9"></th>
+  </tr>
+</thead>
+
+
+
 <%= image_tag @restaurant.image_url %>
 <table class="table">
   <tbody>
@@ -22,6 +31,13 @@
     }
   });
 </script>
+
+<td>
+  <h4>
+    <%= "#{review.user.first_name.capitalize} #{review.user.last_name.capitalize[0]}." %>
+  </h4>
+  <p><%= review.created_at.strftime("%-m/%-d/%-y") %></p>
+</td>
 
 <p>
   <strong>Name:</strong>
