@@ -2,17 +2,23 @@ source 'https://rubygems.org'
 
 ruby "2.3.0"
 
+gem 'redis'
+gem 'redis-namespace'
+gem 'redis-rack-cache'
+gem "hiredis"
+# gem "em-synchrony"
 gem 'envyable'
 gem "fog"
-
+gem 'highcharts-rails', '~> 3.0.0'
 gem 'carrierwave'
-
+gem 'mongoid'
+gem 'alchemy-api-rb', :require => 'alchemy_api'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails', '~> 5.0.4'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -20,6 +26,7 @@ gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 gem 'twilio-ruby'
+gem 'wit'
 
 gem 'bootstrap-sass'
 # Use jquery as the JavaScript library
@@ -38,12 +45,16 @@ gem 'jbuilder', '~> 2.5'
 gem "paperclip"
 gem "paperclip-dropbox"
 gem "figaro"
-
+gem 'countries'
+gem 'faker'
 gem "mini_magick"
-
+gem 'hightop'
 gem 'devise'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
-
+gem 'chartkick'
+gem 'groupdate'
+gem 'active_median'
+gem 'bootstrap-datepicker-rails', '~> 1.6', '>= 1.6.1.1'
 
 group :doc do
   gem 'sdoc', require: false

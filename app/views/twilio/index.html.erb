@@ -11,14 +11,12 @@
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="codepen.css" media="screen" title="no title" charset="utf-8">
-    <script type="text/javascript" src="codepen">
+
 
     </script>
     <title>Twilio</title>
     <%= csrf_meta_tags %>
-    <!-- <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %> -->
-    <!-- <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %> -->
+
     <%= javascript_include_tag "https://js.stripe.com/v2/" %>
     <%= csrf_meta_tags %>
     <%= tag :meta, :name => "stripe-key", :content => ENV["STRIPE_PUBLIC_KEY"] %>
@@ -30,5 +28,21 @@
         <% @history.each do |f| %>
         <li><%= f.message %></li>
           <% end %>
+
+          <input type="text" class='datepicker' >
+
+          <script type="text/javascript">
+            $(document).ready(function(){
+              $('.datepicker').datepicker();
+            });
+          </script>
+
+          <div class="row">
+ <div class="col-md-8">
+   <div id="messages"></div>
+   <input id="chat-input" class="form-control" type="text" placeholder="say anything" autofocus/>
+ </div>
+</div>
+
   </body>
 </html>
